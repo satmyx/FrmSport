@@ -41,9 +41,22 @@ namespace FrmSport
             this.groupBoxListeSport.Controls.Add(checkbox);
             checkbox.Name = nomBouton;
             checkbox.Text = TxtSport.Text;
-            checkbox.Location = new Point(37, 30 * (this.groupBoxListeSport.Controls.Count - 1));
+            checkbox.Location = new Point(37, 30 * (this.groupBoxListeSport.Controls.Count));
             checkbox.Size = new System.Drawing.Size(80, 17);
             MessageBox.Show(TxtSport.Text + " Ajouté");
+
+            if (this.groupBoxListeSport.Controls.Count == 5)
+            {
+                this.BtnAjouterSport.Enabled = false;
+            }
+        }
+
+        private void CkcSelectAll_CheckedChanged(object sender, EventArgs e)
+        {
+            foreach(Control unControle in groupBoxListeSport.Controls)
+            {
+                ((CheckBox)unControle).Checked = CkcSelectAll.CheckState == CheckState.Checked;
+            }
         }
     }
 }

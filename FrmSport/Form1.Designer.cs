@@ -30,11 +30,13 @@ namespace FrmSport
         private void InitializeComponent()
         {
             this.groupBoxSaisieSport = new System.Windows.Forms.GroupBox();
+            this.TxtSport = new System.Windows.Forms.TextBox();
             this.BtnAjouterSport = new System.Windows.Forms.Button();
             this.groupBoxListeSport = new System.Windows.Forms.GroupBox();
             this.BtnQuitter = new System.Windows.Forms.Button();
-            this.TxtSport = new System.Windows.Forms.TextBox();
+            this.CkcSelectAll = new System.Windows.Forms.CheckBox();
             this.groupBoxSaisieSport.SuspendLayout();
+            this.groupBoxListeSport.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxSaisieSport
@@ -48,6 +50,14 @@ namespace FrmSport
             this.groupBoxSaisieSport.TabStop = false;
             this.groupBoxSaisieSport.Text = "Saisie d\'un sport";
             // 
+            // TxtSport
+            // 
+            this.TxtSport.Location = new System.Drawing.Point(6, 16);
+            this.TxtSport.Name = "TxtSport";
+            this.TxtSport.Size = new System.Drawing.Size(196, 20);
+            this.TxtSport.TabIndex = 1;
+            this.TxtSport.TextChanged += new System.EventHandler(this.TxtSport_TextChanged);
+            // 
             // BtnAjouterSport
             // 
             this.BtnAjouterSport.Location = new System.Drawing.Point(209, 15);
@@ -60,6 +70,7 @@ namespace FrmSport
             // 
             // groupBoxListeSport
             // 
+            this.groupBoxListeSport.Controls.Add(this.CkcSelectAll);
             this.groupBoxListeSport.Location = new System.Drawing.Point(259, 124);
             this.groupBoxListeSport.Name = "groupBoxListeSport";
             this.groupBoxListeSport.Size = new System.Drawing.Size(290, 222);
@@ -77,13 +88,16 @@ namespace FrmSport
             this.BtnQuitter.UseVisualStyleBackColor = true;
             this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
-            // TxtSport
+            // CkcSelectAll
             // 
-            this.TxtSport.Location = new System.Drawing.Point(6, 16);
-            this.TxtSport.Name = "TxtSport";
-            this.TxtSport.Size = new System.Drawing.Size(196, 20);
-            this.TxtSport.TabIndex = 1;
-            this.TxtSport.TextChanged += new System.EventHandler(this.TxtSport_TextChanged);
+            this.CkcSelectAll.AutoSize = true;
+            this.CkcSelectAll.Location = new System.Drawing.Point(6, 199);
+            this.CkcSelectAll.Name = "CkcSelectAll";
+            this.CkcSelectAll.Size = new System.Drawing.Size(108, 17);
+            this.CkcSelectAll.TabIndex = 0;
+            this.CkcSelectAll.Text = "Tout sélectionner";
+            this.CkcSelectAll.UseVisualStyleBackColor = true;
+            this.CkcSelectAll.CheckedChanged += new System.EventHandler(this.CkcSelectAll_CheckedChanged);
             // 
             // FrmSport
             // 
@@ -97,6 +111,8 @@ namespace FrmSport
             this.Text = "FrmSport";
             this.groupBoxSaisieSport.ResumeLayout(false);
             this.groupBoxSaisieSport.PerformLayout();
+            this.groupBoxListeSport.ResumeLayout(false);
+            this.groupBoxListeSport.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -108,6 +124,7 @@ namespace FrmSport
         private System.Windows.Forms.GroupBox groupBoxListeSport;
         private System.Windows.Forms.Button BtnQuitter;
         private System.Windows.Forms.TextBox TxtSport;
+        private System.Windows.Forms.CheckBox CkcSelectAll;
     }
 }
 
