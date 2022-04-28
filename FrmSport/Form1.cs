@@ -10,11 +10,33 @@ using System.Windows.Forms;
 
 namespace FrmSport
 {
-    public partial class Form1 : Form
+    public partial class FrmSport : Form
     {
-        public Form1()
+        public FrmSport()
         {
             InitializeComponent();
+        }
+
+        private void BtnQuitter_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void TxtSport_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtSport.TextLength <= 2)
+            {
+                this.BtnAjouterSport.Enabled = false;
+            }
+            else
+            {
+                this.BtnAjouterSport.Enabled = true;
+            }
+        }
+
+        private void BtnAjouterSport_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

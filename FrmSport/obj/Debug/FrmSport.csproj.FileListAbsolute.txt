@@ -1,0 +1,10 @@
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\bin\Debug\FrmSport.exe.config
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\bin\Debug\FrmSport.exe
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\bin\Debug\FrmSport.pdb
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.csproj.AssemblyReference.cache
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.FrmSport.resources
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.Properties.Resources.resources
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.csproj.GenerateResource.cache
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.csproj.CoreCompileInputs.cache
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.exe
+C:\Users\dylan.esculier\Documents\FrmSport\FrmSport\obj\Debug\FrmSport.pdb

@@ -1,7 +1,7 @@
 ﻿
 namespace FrmSport
 {
-    partial class Form1
+    partial class FrmSport
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -31,15 +31,15 @@ namespace FrmSport
         {
             this.groupBoxSaisieSport = new System.Windows.Forms.GroupBox();
             this.BtnAjouterSport = new System.Windows.Forms.Button();
-            this.TxtSaisieSport = new System.Windows.Forms.TextBox();
             this.groupBoxListeSport = new System.Windows.Forms.GroupBox();
             this.BtnQuitter = new System.Windows.Forms.Button();
+            this.TxtSport = new System.Windows.Forms.TextBox();
             this.groupBoxSaisieSport.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxSaisieSport
             // 
-            this.groupBoxSaisieSport.Controls.Add(this.TxtSaisieSport);
+            this.groupBoxSaisieSport.Controls.Add(this.TxtSport);
             this.groupBoxSaisieSport.Controls.Add(this.BtnAjouterSport);
             this.groupBoxSaisieSport.Location = new System.Drawing.Point(259, 394);
             this.groupBoxSaisieSport.Name = "groupBoxSaisieSport";
@@ -56,13 +56,7 @@ namespace FrmSport
             this.BtnAjouterSport.TabIndex = 0;
             this.BtnAjouterSport.Text = "Ajouter";
             this.BtnAjouterSport.UseVisualStyleBackColor = true;
-            // 
-            // TxtSaisieSport
-            // 
-            this.TxtSaisieSport.Location = new System.Drawing.Point(6, 17);
-            this.TxtSaisieSport.Name = "TxtSaisieSport";
-            this.TxtSaisieSport.Size = new System.Drawing.Size(197, 20);
-            this.TxtSaisieSport.TabIndex = 1;
+            this.BtnAjouterSport.Click += new System.EventHandler(this.BtnAjouterSport_Click);
             // 
             // groupBoxListeSport
             // 
@@ -81,8 +75,17 @@ namespace FrmSport
             this.BtnQuitter.TabIndex = 2;
             this.BtnQuitter.Text = "Quitter";
             this.BtnQuitter.UseVisualStyleBackColor = true;
+            this.BtnQuitter.Click += new System.EventHandler(this.BtnQuitter_Click);
             // 
-            // Form1
+            // TxtSport
+            // 
+            this.TxtSport.Location = new System.Drawing.Point(6, 16);
+            this.TxtSport.Name = "TxtSport";
+            this.TxtSport.Size = new System.Drawing.Size(196, 20);
+            this.TxtSport.TabIndex = 1;
+            this.TxtSport.TextChanged += new System.EventHandler(this.TxtSport_TextChanged);
+            // 
+            // FrmSport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,8 +93,8 @@ namespace FrmSport
             this.Controls.Add(this.BtnQuitter);
             this.Controls.Add(this.groupBoxListeSport);
             this.Controls.Add(this.groupBoxSaisieSport);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FrmSport";
+            this.Text = "FrmSport";
             this.groupBoxSaisieSport.ResumeLayout(false);
             this.groupBoxSaisieSport.PerformLayout();
             this.ResumeLayout(false);
@@ -101,10 +104,10 @@ namespace FrmSport
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxSaisieSport;
-        private System.Windows.Forms.TextBox TxtSaisieSport;
         private System.Windows.Forms.Button BtnAjouterSport;
         private System.Windows.Forms.GroupBox groupBoxListeSport;
         private System.Windows.Forms.Button BtnQuitter;
+        private System.Windows.Forms.TextBox TxtSport;
     }
 }
 
