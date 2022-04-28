@@ -36,7 +36,14 @@ namespace FrmSport
 
         private void BtnAjouterSport_Click(object sender, EventArgs e)
         {
-            
+            var nomBouton = "Ckc" + TxtSport.Text;
+            CheckBox checkbox = new CheckBox();
+            this.groupBoxListeSport.Controls.Add(checkbox);
+            checkbox.Name = nomBouton;
+            checkbox.Text = TxtSport.Text;
+            checkbox.Location = new Point(37, 30 * (this.groupBoxListeSport.Controls.Count - 1));
+            checkbox.Size = new System.Drawing.Size(80, 17);
+            MessageBox.Show(TxtSport.Text + " Ajouté");
         }
     }
 }
