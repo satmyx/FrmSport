@@ -37,6 +37,7 @@ namespace FrmSport
             this.BtnQuitter = new System.Windows.Forms.Button();
             this.groupBoxListeBddSport = new System.Windows.Forms.GroupBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBoxSaisieSport.SuspendLayout();
             this.groupBoxListeSport.SuspendLayout();
             this.groupBoxListeBddSport.SuspendLayout();
@@ -111,6 +112,7 @@ namespace FrmSport
             this.groupBoxListeBddSport.TabIndex = 3;
             this.groupBoxListeBddSport.TabStop = false;
             this.groupBoxListeBddSport.Text = "Sports Base de données";
+            this.groupBoxListeBddSport.Enter += new System.EventHandler(this.groupBoxListeBddSport_Enter);
             // 
             // checkBox1
             // 
@@ -122,17 +124,27 @@ namespace FrmSport
             this.checkBox1.Text = "Tout sélectionner";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(340, 158);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
             // FrmSport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.groupBoxListeBddSport);
             this.Controls.Add(this.BtnQuitter);
             this.Controls.Add(this.groupBoxListeSport);
             this.Controls.Add(this.groupBoxSaisieSport);
             this.Name = "FrmSport";
             this.Text = "FrmSport";
+            this.Load += new System.EventHandler(this.FrmSport_Load);
             this.groupBoxSaisieSport.ResumeLayout(false);
             this.groupBoxSaisieSport.PerformLayout();
             this.groupBoxListeSport.ResumeLayout(false);
@@ -153,6 +165,7 @@ namespace FrmSport
         private System.Windows.Forms.CheckBox CkcSelectAll;
         private System.Windows.Forms.GroupBox groupBoxListeBddSport;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

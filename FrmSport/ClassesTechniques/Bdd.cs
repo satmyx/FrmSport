@@ -16,7 +16,7 @@ namespace FrmSport.ClassesTechniques
         /// <summary>
         /// Constructeur
         /// </summary>
-        private Bdd()
+        public Bdd()
         {
             ConnectionStringSettings cnMysql = ConfigurationManager.ConnectionStrings["ConnMysqlLocal"];
             string cs = string.Format(cnMysql.ConnectionString,

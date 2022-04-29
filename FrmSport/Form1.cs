@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FrmSport.ClassesTechniques;
 using System.Windows.Forms;
 
 namespace FrmSport
@@ -55,8 +56,23 @@ namespace FrmSport
         {
             foreach(Control unControle in groupBoxListeSport.Controls)
             {
-                ((CheckBox)unControle).Checked = CkcSelectAll.CheckState == CheckState.Checked;
+                ((CheckBox)unControle).Checked = CkcSelectAll.Checked;
             }
+        }
+
+        private void groupBoxListeBddSport_Enter(object sender, EventArgs e)
+        {
+            Bdd bddmysql = new Bdd();
+            bddmysql.Ouvrir();
+            bddmysql.GetSports();
+            ListBox listBox1 = new ListBox();
+
+            bddmysql.Fermer();
+        }
+
+        private void FrmSport_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
