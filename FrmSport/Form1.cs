@@ -45,7 +45,7 @@ namespace FrmSport
             checkbox.Size = new System.Drawing.Size(80, 17);
             MessageBox.Show(TxtSport.Text + " Ajouté");
 
-            if (this.groupBoxListeSport.Controls.Count == 5)
+            if (this.groupBoxListeSport.Controls.Count == 6)
             {
                 this.BtnAjouterSport.Enabled = false;
             }
