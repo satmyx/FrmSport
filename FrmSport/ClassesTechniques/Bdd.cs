@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Sport.ClassesTechniques
+namespace FrmSport.ClassesTechniques
 {
     class Bdd
     {
