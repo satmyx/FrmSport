@@ -62,17 +62,17 @@ namespace FrmSport
 
         private void groupBoxListeBddSport_Enter(object sender, EventArgs e)
         {
+            // Pas encore
+        }
+
+        private void comboBoxSelectSport_Click(object sender, EventArgs e)
+        {
             Bdd bddmysql = new Bdd();
             bddmysql.Ouvrir();
             bddmysql.GetSports();
-            ListBox listBox1 = new ListBox();
+            DataTable table = new DataTable();
 
             bddmysql.Fermer();
-        }
-
-        private void FrmSport_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
