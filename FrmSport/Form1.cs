@@ -69,9 +69,10 @@ namespace FrmSport
         {
             Bdd bddmysql = new Bdd();
             bddmysql.Ouvrir();
-            bddmysql.GetSports();
-            DataTable table = new DataTable();
-
+            DataTable table= new DataTable();
+            table.Load(bddmysql.GetSports());
+            this.comboBoxSelectSport.DataSource = table;
+            this.comboBoxSelectSport.DisplayMember = "libelle";
             bddmysql.Fermer();
         }
     }
