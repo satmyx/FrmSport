@@ -36,21 +36,25 @@ namespace FrmSport
             this.CkcSelectAll = new System.Windows.Forms.CheckBox();
             this.BtnQuitter = new System.Windows.Forms.Button();
             this.groupBoxListeBddSport = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CkcSelectAllBdd = new System.Windows.Forms.CheckBox();
             this.comboBoxSelectSport = new System.Windows.Forms.ComboBox();
             this.groupBoxAdherents = new System.Windows.Forms.GroupBox();
-            this.LblSports = new System.Windows.Forms.Label();
-            this.comboBoxAdherent = new System.Windows.Forms.ComboBox();
+            this.LblMail = new System.Windows.Forms.Label();
+            this.LblPrenom = new System.Windows.Forms.Label();
+            this.LblNom = new System.Windows.Forms.Label();
+            this.LblId = new System.Windows.Forms.Label();
+            this.BtnModifier = new System.Windows.Forms.Button();
+            this.TxtMail = new System.Windows.Forms.TextBox();
+            this.TxtPrenom = new System.Windows.Forms.TextBox();
+            this.TxtNom = new System.Windows.Forms.TextBox();
+            this.TxtId = new System.Windows.Forms.TextBox();
             this.LblAdherent = new System.Windows.Forms.Label();
+            this.comboBoxAdherent = new System.Windows.Forms.ComboBox();
+            this.LblSports = new System.Windows.Forms.Label();
+            this.LblMaj = new System.Windows.Forms.Label();
             this.groupBoxSaisieSport.SuspendLayout();
             this.groupBoxListeSport.SuspendLayout();
             this.groupBoxListeBddSport.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBoxAdherents.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,9 +110,9 @@ namespace FrmSport
             // 
             // BtnQuitter
             // 
-            this.BtnQuitter.Location = new System.Drawing.Point(317, 283);
+            this.BtnQuitter.Location = new System.Drawing.Point(67, 538);
             this.BtnQuitter.Name = "BtnQuitter";
-            this.BtnQuitter.Size = new System.Drawing.Size(75, 23);
+            this.BtnQuitter.Size = new System.Drawing.Size(673, 39);
             this.BtnQuitter.TabIndex = 2;
             this.BtnQuitter.Text = "Quitter";
             this.BtnQuitter.UseVisualStyleBackColor = true;
@@ -116,71 +120,29 @@ namespace FrmSport
             // 
             // groupBoxListeBddSport
             // 
-            this.groupBoxListeBddSport.Controls.Add(this.checkBox1);
+            this.groupBoxListeBddSport.Controls.Add(this.CkcSelectAllBdd);
             this.groupBoxListeBddSport.Location = new System.Drawing.Point(498, 12);
             this.groupBoxListeBddSport.Name = "groupBoxListeBddSport";
             this.groupBoxListeBddSport.Size = new System.Drawing.Size(290, 225);
             this.groupBoxListeBddSport.TabIndex = 3;
             this.groupBoxListeBddSport.TabStop = false;
             this.groupBoxListeBddSport.Text = "Sports Base de données";
-            this.groupBoxListeBddSport.Enter += new System.EventHandler(this.groupBoxListeBddSport_Enter);
             // 
-            // checkBox1
+            // CkcSelectAllBdd
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 199);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(108, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "Tout sélectionner";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(290, 225);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Sports";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 199);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(108, 17);
-            this.checkBox2.TabIndex = 0;
-            this.checkBox2.Text = "Tout sélectionner";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.CkcSelectAll_CheckedChanged);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Location = new System.Drawing.Point(498, 12);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(290, 225);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Sports Base de données";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBoxListeBddSport_Enter);
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 199);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(108, 17);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "Tout sélectionner";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CkcSelectAllBdd.AutoSize = true;
+            this.CkcSelectAllBdd.Location = new System.Drawing.Point(6, 199);
+            this.CkcSelectAllBdd.Name = "CkcSelectAllBdd";
+            this.CkcSelectAllBdd.Size = new System.Drawing.Size(108, 17);
+            this.CkcSelectAllBdd.TabIndex = 1;
+            this.CkcSelectAllBdd.Text = "Tout sélectionner";
+            this.CkcSelectAllBdd.UseVisualStyleBackColor = true;
+            this.CkcSelectAllBdd.CheckedChanged += new System.EventHandler(this.CkcSelectAllBdd_CheckedChanged);
             // 
             // comboBoxSelectSport
             // 
             this.comboBoxSelectSport.FormattingEnabled = true;
-            this.comboBoxSelectSport.Location = new System.Drawing.Point(37, 30);
+            this.comboBoxSelectSport.Location = new System.Drawing.Point(55, 32);
             this.comboBoxSelectSport.Name = "comboBoxSelectSport";
             this.comboBoxSelectSport.Size = new System.Drawing.Size(181, 21);
             this.comboBoxSelectSport.TabIndex = 4;
@@ -189,43 +151,141 @@ namespace FrmSport
             // 
             // groupBoxAdherents
             // 
+            this.groupBoxAdherents.Controls.Add(this.LblMaj);
+            this.groupBoxAdherents.Controls.Add(this.LblMail);
+            this.groupBoxAdherents.Controls.Add(this.LblPrenom);
+            this.groupBoxAdherents.Controls.Add(this.LblNom);
+            this.groupBoxAdherents.Controls.Add(this.LblId);
+            this.groupBoxAdherents.Controls.Add(this.BtnModifier);
+            this.groupBoxAdherents.Controls.Add(this.TxtMail);
+            this.groupBoxAdherents.Controls.Add(this.TxtPrenom);
+            this.groupBoxAdherents.Controls.Add(this.TxtNom);
+            this.groupBoxAdherents.Controls.Add(this.TxtId);
             this.groupBoxAdherents.Controls.Add(this.LblAdherent);
             this.groupBoxAdherents.Controls.Add(this.comboBoxAdherent);
             this.groupBoxAdherents.Controls.Add(this.LblSports);
             this.groupBoxAdherents.Controls.Add(this.comboBoxSelectSport);
-            this.groupBoxAdherents.Location = new System.Drawing.Point(78, 319);
+            this.groupBoxAdherents.Location = new System.Drawing.Point(67, 319);
             this.groupBoxAdherents.Name = "groupBoxAdherents";
-            this.groupBoxAdherents.Size = new System.Drawing.Size(662, 232);
+            this.groupBoxAdherents.Size = new System.Drawing.Size(673, 213);
             this.groupBoxAdherents.TabIndex = 5;
             this.groupBoxAdherents.TabStop = false;
             this.groupBoxAdherents.Text = "Adhérents";
             // 
+            // LblMail
+            // 
+            this.LblMail.AutoSize = true;
+            this.LblMail.Location = new System.Drawing.Point(18, 155);
+            this.LblMail.Name = "LblMail";
+            this.LblMail.Size = new System.Drawing.Size(26, 13);
+            this.LblMail.TabIndex = 16;
+            this.LblMail.Text = "Mail";
+            // 
+            // LblPrenom
+            // 
+            this.LblPrenom.AutoSize = true;
+            this.LblPrenom.Location = new System.Drawing.Point(6, 132);
+            this.LblPrenom.Name = "LblPrenom";
+            this.LblPrenom.Size = new System.Drawing.Size(43, 13);
+            this.LblPrenom.TabIndex = 15;
+            this.LblPrenom.Text = "Prénom";
+            // 
+            // LblNom
+            // 
+            this.LblNom.AutoSize = true;
+            this.LblNom.Location = new System.Drawing.Point(15, 106);
+            this.LblNom.Name = "LblNom";
+            this.LblNom.Size = new System.Drawing.Size(29, 13);
+            this.LblNom.TabIndex = 14;
+            this.LblNom.Text = "Nom";
+            // 
+            // LblId
+            // 
+            this.LblId.AutoSize = true;
+            this.LblId.Location = new System.Drawing.Point(28, 80);
+            this.LblId.Name = "LblId";
+            this.LblId.Size = new System.Drawing.Size(16, 13);
+            this.LblId.TabIndex = 13;
+            this.LblId.Text = "Id";
+            // 
+            // BtnModifier
+            // 
+            this.BtnModifier.Location = new System.Drawing.Point(296, 181);
+            this.BtnModifier.Name = "BtnModifier";
+            this.BtnModifier.Size = new System.Drawing.Size(75, 23);
+            this.BtnModifier.TabIndex = 12;
+            this.BtnModifier.Text = "Modifier";
+            this.BtnModifier.UseVisualStyleBackColor = true;
+            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
+            // 
+            // TxtMail
+            // 
+            this.TxtMail.Location = new System.Drawing.Point(55, 155);
+            this.TxtMail.Name = "TxtMail";
+            this.TxtMail.Size = new System.Drawing.Size(570, 20);
+            this.TxtMail.TabIndex = 11;
+            this.TxtMail.TextChanged += new System.EventHandler(this.TxtMail_TextChanged);
+            // 
+            // TxtPrenom
+            // 
+            this.TxtPrenom.Location = new System.Drawing.Point(55, 129);
+            this.TxtPrenom.Name = "TxtPrenom";
+            this.TxtPrenom.Size = new System.Drawing.Size(570, 20);
+            this.TxtPrenom.TabIndex = 10;
+            // 
+            // TxtNom
+            // 
+            this.TxtNom.Location = new System.Drawing.Point(55, 103);
+            this.TxtNom.Name = "TxtNom";
+            this.TxtNom.Size = new System.Drawing.Size(570, 20);
+            this.TxtNom.TabIndex = 9;
+            // 
+            // TxtId
+            // 
+            this.TxtId.Location = new System.Drawing.Point(55, 77);
+            this.TxtId.Name = "TxtId";
+            this.TxtId.Size = new System.Drawing.Size(570, 20);
+            this.TxtId.TabIndex = 8;
+            // 
+            // LblAdherent
+            // 
+            this.LblAdherent.AutoSize = true;
+            this.LblAdherent.Location = new System.Drawing.Point(497, 18);
+            this.LblAdherent.Name = "LblAdherent";
+            this.LblAdherent.Size = new System.Drawing.Size(55, 13);
+            this.LblAdherent.TabIndex = 7;
+            this.LblAdherent.Text = "Adhérents";
+            // 
+            // comboBoxAdherent
+            // 
+            this.comboBoxAdherent.FormattingEnabled = true;
+            this.comboBoxAdherent.Location = new System.Drawing.Point(444, 32);
+            this.comboBoxAdherent.Name = "comboBoxAdherent";
+            this.comboBoxAdherent.Size = new System.Drawing.Size(181, 21);
+            this.comboBoxAdherent.TabIndex = 6;
+            this.comboBoxAdherent.Text = "-- Sélectionnez --";
+            this.comboBoxAdherent.SelectedValueChanged += new System.EventHandler(this.comboBoxAdherent_SelectedValueChanged);
+            this.comboBoxAdherent.Click += new System.EventHandler(this.comboBoxAdherent_Click);
+            // 
             // LblSports
             // 
             this.LblSports.AutoSize = true;
-            this.LblSports.Location = new System.Drawing.Point(99, 16);
+            this.LblSports.Location = new System.Drawing.Point(112, 16);
             this.LblSports.Name = "LblSports";
             this.LblSports.Size = new System.Drawing.Size(37, 13);
             this.LblSports.TabIndex = 5;
             this.LblSports.Text = "Sports";
             // 
-            // comboBoxAdherent
+            // LblMaj
             // 
-            this.comboBoxAdherent.FormattingEnabled = true;
-            this.comboBoxAdherent.Location = new System.Drawing.Point(426, 30);
-            this.comboBoxAdherent.Name = "comboBoxAdherent";
-            this.comboBoxAdherent.Size = new System.Drawing.Size(181, 21);
-            this.comboBoxAdherent.TabIndex = 6;
-            this.comboBoxAdherent.Text = "-- Sélectionnez --";
-            // 
-            // LblAdherent
-            // 
-            this.LblAdherent.AutoSize = true;
-            this.LblAdherent.Location = new System.Drawing.Point(479, 14);
-            this.LblAdherent.Name = "LblAdherent";
-            this.LblAdherent.Size = new System.Drawing.Size(55, 13);
-            this.LblAdherent.TabIndex = 7;
-            this.LblAdherent.Text = "Adhérents";
+            this.LblMaj.AutoSize = true;
+            this.LblMaj.ForeColor = System.Drawing.Color.DarkGreen;
+            this.LblMaj.Location = new System.Drawing.Point(265, 40);
+            this.LblMaj.Name = "LblMaj";
+            this.LblMaj.Size = new System.Drawing.Size(149, 13);
+            this.LblMaj.TabIndex = 17;
+            this.LblMaj.Text = "Changements pris en comptes";
+            this.LblMaj.Visible = false;
             // 
             // FrmSport
             // 
@@ -233,24 +293,19 @@ namespace FrmSport
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 600);
             this.Controls.Add(this.groupBoxAdherents);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBoxListeBddSport);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.BtnQuitter);
             this.Controls.Add(this.groupBoxListeSport);
             this.Controls.Add(this.groupBoxSaisieSport);
             this.Name = "FrmSport";
             this.Text = "FrmSport";
+            this.Load += new System.EventHandler(this.FrmSport_Load);
             this.groupBoxSaisieSport.ResumeLayout(false);
             this.groupBoxSaisieSport.PerformLayout();
             this.groupBoxListeSport.ResumeLayout(false);
             this.groupBoxListeSport.PerformLayout();
             this.groupBoxListeBddSport.ResumeLayout(false);
             this.groupBoxListeBddSport.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBoxAdherents.ResumeLayout(false);
             this.groupBoxAdherents.PerformLayout();
             this.ResumeLayout(false);
@@ -264,18 +319,24 @@ namespace FrmSport
         private System.Windows.Forms.GroupBox groupBoxListeSport;
         private System.Windows.Forms.Button BtnQuitter;
         private System.Windows.Forms.TextBox TxtSport;
-        private System.Windows.Forms.CheckBox CkcSelectAll;
         private System.Windows.Forms.GroupBox groupBoxListeBddSport;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox CkcSelectAllBdd;
         private System.Windows.Forms.ComboBox comboBoxSelectSport;
         private System.Windows.Forms.GroupBox groupBoxAdherents;
         private System.Windows.Forms.Label LblSports;
         private System.Windows.Forms.Label LblAdherent;
         private System.Windows.Forms.ComboBox comboBoxAdherent;
+        private System.Windows.Forms.TextBox TxtPrenom;
+        private System.Windows.Forms.TextBox TxtNom;
+        private System.Windows.Forms.TextBox TxtId;
+        private System.Windows.Forms.Button BtnModifier;
+        private System.Windows.Forms.TextBox TxtMail;
+        private System.Windows.Forms.Label LblPrenom;
+        private System.Windows.Forms.Label LblNom;
+        private System.Windows.Forms.Label LblId;
+        private System.Windows.Forms.Label LblMail;
+        private System.Windows.Forms.CheckBox CkcSelectAll;
+        private System.Windows.Forms.Label LblMaj;
     }
 }
 
