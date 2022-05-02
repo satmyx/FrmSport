@@ -90,8 +90,7 @@ namespace FrmSport
         /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
         private void comboBoxSelectSport_Click(object sender, EventArgs e)
         {
-            Bdd bddmysql = new Bdd();
-            bddmysql.Ouvrir();
+            Bdd bddmysql = Bdd.getInstance(); bddmysql.Ouvrir();
             DataTable table = new DataTable();
             table.Load(bddmysql.GetSports());
             this.comboBoxSelectSport.DataSource = table;
@@ -107,7 +106,7 @@ namespace FrmSport
         /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
         private void comboBoxAdherent_Click(object sender, EventArgs e)
         {
-            Bdd bddmysql = new Bdd();
+            Bdd bddmysql = Bdd.getInstance();
             bddmysql.Ouvrir();
             DataTable tableadherent = new DataTable();
             tableadherent.Load(bddmysql.GetAdherentBySport((int)this.comboBoxSelectSport.SelectedValue));
@@ -124,7 +123,7 @@ namespace FrmSport
         /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
         private void comboBoxAdherent_SelectedValueChanged(object sender, EventArgs e)
         {
-            Bdd bddmysql = new Bdd();
+            Bdd bddmysql = Bdd.getInstance();
             bddmysql.Ouvrir();
             DataTable tableinfoadherent = new DataTable();
             tableinfoadherent.Load(bddmysql.GetAdherentById(Convert.ToInt32(this.comboBoxAdherent.SelectedValue)));
@@ -162,7 +161,7 @@ namespace FrmSport
         /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            Bdd bddmysql = new Bdd();
+            Bdd bddmysql = Bdd.getInstance();
             bddmysql.Ouvrir();
             bddmysql.UpdateMail(Convert.ToInt32(this.TxtId.Text),this.TxtMail.Text);
             bddmysql.Fermer();
@@ -189,7 +188,7 @@ namespace FrmSport
         /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
         private void FrmSport_Load(object sender, EventArgs e)
         {
-            Bdd bddmysql = new Bdd();
+            Bdd bddmysql = Bdd.getInstance();
             bddmysql.Ouvrir();
             DataTable table = new DataTable();
             table.Load(bddmysql.GetSports());
