@@ -201,6 +201,36 @@ namespace FrmSport
                 checkbox.Location = new Point(37, 20 * (this.groupBoxListeBddSport.Controls.Count));
             }
             bddmysql.Fermer();
+            this.comboBoxAdherent.Enabled = false;
+            this.TxtId.Enabled = false;
+            this.TxtMail.Enabled = false;
+            this.TxtNom.Enabled = false;
+            this.TxtPrenom.Enabled = false;
+            this.BtnModifier.Enabled = false;
+        }
+
+        /// <summary>
+        /// Au changement de text dans la comboboxadherent les infos adherents ne sont plus grisée. 
+        /// </summary>
+        /// <param name="sender">Envoie.</param>
+        /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
+        private void comboBoxAdherent_TextChanged(object sender, EventArgs e)
+        {
+            this.TxtId.Enabled = true;
+            this.TxtMail.Enabled = true;
+            this.TxtNom.Enabled = true;
+            this.TxtPrenom.Enabled = true;
+            this.BtnModifier.Enabled = true;
+        }
+
+        /// <summary>
+        /// Au changement de text dans la comboboxsport, la comboboxadherent n'est plus grisées.
+        /// </summary>
+        /// <param name="sender">Envoie.</param>
+        /// <param name="e">Représente la classe de base pour les classes qui contiennent des données d’événement.</param>
+        private void comboBoxSelectSport_TextChanged(object sender, EventArgs e)
+        {
+            this.comboBoxAdherent.Enabled = true;
         }
     }
 }

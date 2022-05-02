@@ -39,6 +39,7 @@ namespace FrmSport
             this.CkcSelectAllBdd = new System.Windows.Forms.CheckBox();
             this.comboBoxSelectSport = new System.Windows.Forms.ComboBox();
             this.groupBoxAdherents = new System.Windows.Forms.GroupBox();
+            this.LblMaj = new System.Windows.Forms.Label();
             this.LblMail = new System.Windows.Forms.Label();
             this.LblPrenom = new System.Windows.Forms.Label();
             this.LblNom = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace FrmSport
             this.LblAdherent = new System.Windows.Forms.Label();
             this.comboBoxAdherent = new System.Windows.Forms.ComboBox();
             this.LblSports = new System.Windows.Forms.Label();
-            this.LblMaj = new System.Windows.Forms.Label();
             this.groupBoxSaisieSport.SuspendLayout();
             this.groupBoxListeSport.SuspendLayout();
             this.groupBoxListeBddSport.SuspendLayout();
@@ -147,6 +147,7 @@ namespace FrmSport
             this.comboBoxSelectSport.Size = new System.Drawing.Size(181, 21);
             this.comboBoxSelectSport.TabIndex = 4;
             this.comboBoxSelectSport.Text = "-- Sélectionnez --";
+            this.comboBoxSelectSport.TextChanged += new System.EventHandler(this.comboBoxSelectSport_TextChanged);
             this.comboBoxSelectSport.Click += new System.EventHandler(this.comboBoxSelectSport_Click);
             // 
             // groupBoxAdherents
@@ -171,6 +172,17 @@ namespace FrmSport
             this.groupBoxAdherents.TabIndex = 5;
             this.groupBoxAdherents.TabStop = false;
             this.groupBoxAdherents.Text = "Adhérents";
+            // 
+            // LblMaj
+            // 
+            this.LblMaj.AutoSize = true;
+            this.LblMaj.ForeColor = System.Drawing.Color.DarkGreen;
+            this.LblMaj.Location = new System.Drawing.Point(265, 40);
+            this.LblMaj.Name = "LblMaj";
+            this.LblMaj.Size = new System.Drawing.Size(149, 13);
+            this.LblMaj.TabIndex = 17;
+            this.LblMaj.Text = "Changements pris en comptes";
+            this.LblMaj.Visible = false;
             // 
             // LblMail
             // 
@@ -265,6 +277,7 @@ namespace FrmSport
             this.comboBoxAdherent.TabIndex = 6;
             this.comboBoxAdherent.Text = "-- Sélectionnez --";
             this.comboBoxAdherent.SelectedValueChanged += new System.EventHandler(this.comboBoxAdherent_SelectedValueChanged);
+            this.comboBoxAdherent.TextChanged += new System.EventHandler(this.comboBoxAdherent_TextChanged);
             this.comboBoxAdherent.Click += new System.EventHandler(this.comboBoxAdherent_Click);
             // 
             // LblSports
@@ -275,17 +288,6 @@ namespace FrmSport
             this.LblSports.Size = new System.Drawing.Size(37, 13);
             this.LblSports.TabIndex = 5;
             this.LblSports.Text = "Sports";
-            // 
-            // LblMaj
-            // 
-            this.LblMaj.AutoSize = true;
-            this.LblMaj.ForeColor = System.Drawing.Color.DarkGreen;
-            this.LblMaj.Location = new System.Drawing.Point(265, 40);
-            this.LblMaj.Name = "LblMaj";
-            this.LblMaj.Size = new System.Drawing.Size(149, 13);
-            this.LblMaj.TabIndex = 17;
-            this.LblMaj.Text = "Changements pris en comptes";
-            this.LblMaj.Visible = false;
             // 
             // FrmSport
             // 
